@@ -1,26 +1,4 @@
-var counter = 0;
-var outputEl = document.getElementById("outputEl");
-for (; counter < people.length; counter++) {
-  // Give each person element a unique identifier
-  outputEl.innerHTML += `<div class="person__container" id="person--${counter}"></div>`;
-}
-
-// Now containerEl will have elements in it
-var containerEl = document.getElementsByClassName("person__container");
-
-// Event listeners are created
-for (var i = 0; i < containerEl.length; i++) {
-  containerEl[i].addEventListener("click", function (event) {
-    // Logic to execute when the element is clicked
-  });
-};
-
-////////// JS from Dongle project ///////
-for (var i = 0; i < dongle.length; i++) {
-  var productCard = "";
-  productCard +="<div class='productCard'><img class='productPic' src=" + dongle[i].image + "><p class='lightBox'>" + "<div class='descrip'>" + dongle[i].descrip + "</div>";
-  products.innerHTML += productCard
-////////////////////////////////////////
+/////////////////// ARRAY //////////////////////////////////////////////////
 
 var people = [
 {
@@ -31,7 +9,8 @@ var people = [
   lifespan: {
     birth: 1747,
     death: 1797
-  },
+  }
+},
 {
   title: "Sir",
   name: "Isaac Newton",
@@ -40,7 +19,8 @@ var people = [
   lifespan: {
     birth: 1800,
     death: 1801
-  },
+  }
+ },
   {
   title: "King",
   name: "Charles III",
@@ -50,4 +30,56 @@ var people = [
     birth: 1600,
     death: 1601
   }
+ },
+ {
+  title: "Captain",
+  name: "Jean-Luc Picard",
+  bio: "Captain of various iterations of the USS Enterprise. Leader of countless away missions. Had second life as Professor Xavier.",
+  image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Tomoe-Gozen.jpg"
+  lifespan: {
+    birth: 1600,
+    death: 1601
+  }
+ },
+  {
+  title: "Queen",
+  name: "Daenerys Targaryen",
+  bio: "First of Her Name, the Unburnt, Queen of the Andals and the First Men, Khaleesi of the Great Grass Sea, Breaker of Chains, and Mother of Dragons.",
+  image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Tomoe-Gozen.jpg"
+  lifespan: {
+    birth: 1600,
+    death: 1601
+  }
+ },
 ];
+
+/////////////////// WRITING ARRAY TO DOM ///////////////////////////////////
+
+var counter = 0;
+
+var outputEl = document.getElementById("outputEl");
+
+for (; counter < 5; counter++) {
+  outputEl.innerHTML = "Test String Here";
+
+ //  `
+ //  		<div class="person__container" id="person--${counter}">
+	// 		<person>
+	// 		  <header> ${people[counter].title} ${people[counter].name}</header>
+	// 		  <section>${people[counter].bio} ${people[counter].image}</section>
+	// 		  <footer>${people[counter].lifespan.birth} - ${people[counter].lifespan.death}</footer>
+	// 		</person>
+	// 	</div>
+	// `;
+};
+
+/////////////////// REFERENCE AND LOGIC ///////////////////////////////////
+
+// var containerEl = document.getElementsByClassName("person__container");
+
+// for (var i = 0; i < containerEl.length; i++) {
+//   containerEl[i].addEventListener("click", function (event) {
+//     // Logic to execute when the element is clicked
+//     console.log("clicking on people divs")
+//   });
+// };
