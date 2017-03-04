@@ -25,7 +25,7 @@ var people = [
   title: "King",
   name: "Charles III",
   bio: "Crazy Spanish king that did a bunch of silly stuff instead of actually governing his state.",
-  image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Tomoe-Gozen.jpg",
+  image: "https://en.wikipedia.org/wiki/Charles_III_of_Spain#/media/File:Charles_III_of_Spain_high_resolution.jpg",
   lifespan: {
     birth: 1600,
     death: 1601
@@ -35,7 +35,7 @@ var people = [
   title: "Captain",
   name: "Jean-Luc Picard",
   bio: "Captain of various iterations of the USS Enterprise. Leader of countless away missions. Had second life as Professor Xavier.",
-  image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Tomoe-Gozen.jpg",
+  image: "http://uncyclopedia.wikia.com/wiki/File:CaptainJeanLucPicard.jpg",
   lifespan: {
     birth: 1600,
     death: 1601
