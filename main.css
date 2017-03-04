@@ -1,0 +1,24 @@
+#outputEl {
+
+}
+
+
+.person__container {
+	display: inline-block;
+	border: 5px solid black;
+	width: 300px;
+	min-height: 550px;
+	margin: 25px;
+	text-align: justify;
+	vertical-align: top;
+}
+
+
+.person__container section {
+	min-height: 100px;
+}
+
+.bioPic {
+	width: 200px;
+	height: 250px;
+}
