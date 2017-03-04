@@ -71,11 +71,22 @@ for (var counter = 0; counter < 5; counter++) {
 
 /////////////////// REFERENCE AND LOGIC ///////////////////////////////////
 
-// var containerEl = document.getElementsByClassName("person__container");
+var containerEl = document.getElementsByClassName("person__container");
 
-// for (var i = 0; i < containerEl.length; i++) {
-//   containerEl[i].addEventListener("click", function (event) {
-//     // Logic to execute when the element is clicked
-//     console.log("clicking on people divs")
-//   });
-// };
+for (var i = 0; i < containerEl.length; i++) {
+  containerEl[i].addEventListener("click", function (event) {
+  });
+};
+
+window.addEventListener("click", function(e) {
+  for (j = 0; j < containerEl.length; j++) {
+    console.log("outputEl.childNodes[4]", outputEl.childNodes[j].className); // <<<< THIS IS WHERE I LEFT OFF
+    // outputEl.childNodes[j].classList.remove("clicked");
+  }
+  if (e.target.classList.value === "person__container") {
+      e.target.classList.add("clicked");
+    }
+    else if (e.target.parentNode.parentNode.classList.value === "person__container"){
+      e.target.parentNode.parentNode.classList.add("clicked");
+    }
+  });
