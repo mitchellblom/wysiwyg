@@ -14,41 +14,41 @@ var people = [
 {
   title: "Sir",
   name: "Isaac Newton",
-  bio: "Extremely smart man whose bio I will look up and put a longer sentence in here later.",
-  image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Tomoe-Gozen.jpg",
+  bio: "Sir Isaac Newton PRS was an English mathematician, astronomer, and physicist who is widely recognised as one of the most influential scientists of all time and a key figure in the scientific revolution.",
+  image: "https://upload.wikimedia.org/wikipedia/commons/3/39/GodfreyKneller-IsaacNewton-1689.jpg",
   lifespan: {
-    birth: 1800,
-    death: 1801
+    birth: 1643,
+    death: 1727
   }
  },
   {
   title: "King",
   name: "Charles III",
-  bio: "Crazy Spanish king that did a bunch of silly stuff instead of actually governing his state.",
-  image: "https://en.wikipedia.org/wiki/Charles_III_of_Spain#/media/File:Charles_III_of_Spain_high_resolution.jpg",
+  bio: "Charles III was the King of Spain and the Spanish Indies from 1759 to 1788. While he was the fifth son of Philip V of Spain, he was the eldest son of Philip's second wife, Elisabeth Farnese. Did a bunch of silly stuff instead of actually governing his empire.",
+  image: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Charles_III_of_Spain_high_resolution.jpg",
   lifespan: {
-    birth: 1600,
-    death: 1601
+    birth: 1716,
+    death: 1788
   }
  },
  {
   title: "Captain",
   name: "Jean-Luc Picard",
-  bio: "Captain of various iterations of the USS Enterprise. Leader of countless away missions. Had second life as Professor Xavier.",
-  image: "http://uncyclopedia.wikia.com/wiki/File:CaptainJeanLucPicard.jpg",
+  bio: "Jean-Luc Picard is a fictional character in the Star Trek franchise, most often seen as Captain of the starship USS Enterprise-D. He appears in the television series Star Trek: The Next Generation. Leader of countless away missions. Had second life as Professor Xavier.",
+  image: "https://s-media-cache-ak0.pinimg.com/originals/47/ba/21/47ba21ca9b5cf73389f4398f38263821.jpg",
   lifespan: {
-    birth: 1600,
-    death: 1601
+    birth: 2305,
+    death: "present"
   }
  },
   {
   title: "Queen",
   name: "Daenerys Targaryen",
   bio: "First of Her Name, the Unburnt, Queen of the Andals and the First Men, Khaleesi of the Great Grass Sea, Breaker of Chains, and Mother of Dragons.",
-  image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Tomoe-Gozen.jpg",
+  image: "https://s-media-cache-ak0.pinimg.com/736x/4f/b8/f6/4fb8f6f5c29f5598b87556ae731cb089.jpg",
   lifespan: {
-    birth: 1600,
-    death: 1601
+    birth: 284,
+    death: "present"
   }
  },
 ];
