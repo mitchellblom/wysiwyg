@@ -69,19 +69,22 @@ for (var counter = 0; counter < 5; counter++) {
 		  </div>`;
 };
 
-/////////////////// REFERENCE AND LOGIC ///////////////////////////////////
+/////////////////// REFERENCES AND LOGIC ///////////////////////////////////
 
-var containerEl = document.getElementsByClassName("person__container");
+var containerEl = outputEl.getElementsByClassName("person__container");
+var userInputText = document.getElementById("userInputTextBox")
 
 for (var i = 0; i < containerEl.length; i++) {
-  containerEl[i].addEventListener("click", function (event) {
+    containerEl[i].addEventListener("click", function (event) {
+    // add focus to userInputText here 
+    // set outputEl equal to userInputText
   });
 };
 
 window.addEventListener("click", function(e) {
   for (j = 0; j < containerEl.length; j++) {
-    console.log("outputEl.childNodes[4]", outputEl.childNodes[j].className); // <<<< THIS IS WHERE I LEFT OFF
-    // outputEl.childNodes[j].classList.remove("clicked");
+    console.log("containerEl[j].classList.value", containerEl[j].classList.value);
+    containerEl[j].classList.value = "person__container";
   }
   if (e.target.classList.value === "person__container") {
       e.target.classList.add("clicked");
