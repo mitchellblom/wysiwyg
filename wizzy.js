@@ -60,8 +60,8 @@ var outputEl = document.getElementById("outputEl");
 for (var counter = 0; counter < 5; counter++) {
   outputEl.innerHTML += 
       `<div class="person__container" id="person--${counter}">
-  			<img class="bioPic" src="${people[counter].image}">
         <person>
+          <img class="bioPic" src="${people[counter].image}">
   			  <header> ${people[counter].title} ${people[counter].name}</header>
   			  <section>${people[counter].bio} </section>
   			  <footer>${people[counter].lifespan.birth} - ${people[counter].lifespan.death}</footer>
