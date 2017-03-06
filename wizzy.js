@@ -74,6 +74,7 @@ for (var counter = 0; counter < 5; counter++) {
 var containerEl = outputEl.getElementsByClassName("person__container");
 var userInputText = document.getElementById("userInputTextBox");
 
+/// Focus on the input box and bind bio content to it
 document.addEventListener("click", function (e) {
   var clickedBio = e.target;
   console.log("clickedBio", clickedBio);
@@ -84,9 +85,9 @@ document.addEventListener("click", function (e) {
 });
 
 
+/// Add border to clicked biocard
 window.addEventListener("click", function(e) {
   for (j = 0; j < containerEl.length; j++) {
-    // console.log("containerEl[j].classList.value", containerEl[j].classList.value);
     containerEl[j].classList.value = "person__container";
   }
   if (e.target.classList.value === "person__container") {
@@ -96,3 +97,11 @@ window.addEventListener("click", function(e) {
       e.target.parentNode.parentNode.classList.add("clicked");
     }
   });
+
+/// Clear input on Enter key
+document.onkeydown = function() {
+ if (window.event.keyCode === 13) {
+   userInputText.value = "";
+ } 
+};
+
