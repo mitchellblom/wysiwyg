@@ -72,18 +72,21 @@ for (var counter = 0; counter < 5; counter++) {
 /////////////////// REFERENCES AND LOGIC ///////////////////////////////////
 
 var containerEl = outputEl.getElementsByClassName("person__container");
-var userInputText = document.getElementById("userInputTextBox")
+var userInputText = document.getElementById("userInputTextBox");
 
-for (var i = 0; i < containerEl.length; i++) {
-    containerEl[i].addEventListener("click", function (event) {
-    // add focus to userInputText here 
-    // set outputEl equal to userInputText
+document.addEventListener("click", function (e) {
+  var clickedBio = e.target;
+  console.log("clickedBio", clickedBio);
+  userInputText.focus();
+  userInputText.addEventListener("keyup", function(){
+    clickedBio.innerHTML = userInputText.value;
   });
-};
+});
+
 
 window.addEventListener("click", function(e) {
   for (j = 0; j < containerEl.length; j++) {
-    console.log("containerEl[j].classList.value", containerEl[j].classList.value);
+    // console.log("containerEl[j].classList.value", containerEl[j].classList.value);
     containerEl[j].classList.value = "person__container";
   }
   if (e.target.classList.value === "person__container") {
