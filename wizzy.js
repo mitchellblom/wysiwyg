@@ -76,8 +76,15 @@ outputEl.addEventListener("click", function(e) {
     userInputText.addEventListener("keyup", function() {
         clickedBio.innerHTML = userInputText.value;
         userInputText.addEventListener("blur", function() {
-            clickedBio = "";
+            // clickedBio = "";
         });
+    userInputText.onkeydown = function() {
+    if (window.event.keyCode === 13) {
+        console.log("working");
+        clickedBio = "";
+        userInputText.value = "";
+    }
+};
     });
 });
 
@@ -94,8 +101,9 @@ window.addEventListener("click", function(e) {
 });
 
 /// Clear input on Enter key
-document.onkeydown = function() {
-    if (window.event.keyCode === 13) {
-        userInputText.value = "";
-    }
-};
+// document.onkeydown = function() {
+//     if (window.event.keyCode === 13) {
+//         clickedBio.innerHTML = clickedBio.innerHTML;
+//         userInputText.value = "";
+//     }
+// };
