@@ -56,9 +56,9 @@ for (var counter = 0; counter < 5; counter++) {
         `<div class="person__container" id="person--${counter}">
         <person>
           <img class="bioPic" src="${people[counter].image}">
-  			  <header> ${people[counter].title} ${people[counter].name}</header>
-  			  <section>${people[counter].bio} </section>
-  			  <footer>${people[counter].lifespan.birth} - ${people[counter].lifespan.death}</footer>
+  			  <header class="editable"> ${people[counter].title} ${people[counter].name}</header>
+  			  <section class="editable">${people[counter].bio} </section>
+  			  <footer class="editable">${people[counter].lifespan.birth} - ${people[counter].lifespan.death}</footer>
   			</person>
 		  </div>`;
 };
@@ -70,6 +70,7 @@ var userInputText = document.getElementById("userInputTextBox");
 
 /// Focus on the input box and bind bio content to it
 outputEl.addEventListener("click", function(e) {
+    if (e.target.classList.value === "editable") {
     var clickedBio = e.target;
     userInputText.value = clickedBio.innerHTML;
     userInputText.focus();
@@ -80,12 +81,16 @@ outputEl.addEventListener("click", function(e) {
         });
     userInputText.onkeydown = function() {
     if (window.event.keyCode === 13) {
-        console.log("working");
         clickedBio = "";
         userInputText.value = "";
     }
 };
     });
+} 
+    else {
+        userInputText.value = "";                                             /// THIS IS WHERE I LEFT OFF
+        console.log("this is the else");
+    };
 });
 
 /// Add border to clicked biocard
@@ -99,11 +104,3 @@ window.addEventListener("click", function(e) {
         e.target.parentNode.parentNode.classList.add("clicked");
     }
 });
-
-/// Clear input on Enter key
-// document.onkeydown = function() {
-//     if (window.event.keyCode === 13) {
-//         clickedBio.innerHTML = clickedBio.innerHTML;
-//         userInputText.value = "";
-//     }
-// };
