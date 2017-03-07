@@ -83,13 +83,15 @@ outputEl.addEventListener("click", function(e) {
     if (window.event.keyCode === 13) {
         clickedBio = "";
         userInputText.value = "";
+        containerEl[j].classList.value = "person__container"
     }
 };
     });
 } 
     else {
-        userInputText.value = "";                                             /// THIS IS WHERE I LEFT OFF
-        console.log("this is the else");
+        userInputText.value = "";                                             
+        // clickedBio = "";
+        // alert("Click text to edit");
     };
 });
 
