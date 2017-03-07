@@ -71,29 +71,31 @@ var userInputText = document.getElementById("userInputTextBox");
 /// Focus on the input box and bind bio content to it
 outputEl.addEventListener("click", function(e) {
     if (e.target.classList.value === "editable") {
-    var clickedBio = e.target;
-    userInputText.value = clickedBio.innerHTML;
-    userInputText.focus();
-    userInputText.addEventListener("keyup", function() {
-        clickedBio.innerHTML = userInputText.value;
-        userInputText.addEventListener("blur", function() {
-            // clickedBio = "";
+        var clickedBio = e.target;
+        userInputText.value = clickedBio.innerHTML;
+        userInputText.focus();
+        userInputText.addEventListener("keyup", function() {
+            clickedBio.innerHTML = userInputText.value;
+            userInputText.onkeydown = function() {
+                if (window.event.keyCode === 13) {
+                    clickedBio = "";
+                    userInputText.value = "";
+                }
+    //TOGGLE THIS ON AND OFF TO TEST FUNCTIONALITY
+            // document.onclick = function() {
+            //     if (e.target !== containerEl) {
+            //         clickedBio = "";
+            //         userInputText.value = "";
+            //     }
+            // };
+            };
         });
-    userInputText.onkeydown = function() {
-    if (window.event.keyCode === 13) {
-        clickedBio = "";
-        userInputText.value = "";
-        containerEl[j].classList.value = "person__container"
-    }
-};
+        }
+        else {
+            userInputText.value = "";
+            // alert("Click text to edit");
+        };
     });
-} 
-    else {
-        userInputText.value = "";                                             
-        // clickedBio = "";
-        // alert("Click text to edit");
-    };
-});
 
 /// Add border to clicked biocard
 window.addEventListener("click", function(e) {
