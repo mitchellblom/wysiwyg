@@ -57,21 +57,38 @@ for (var counter = 0; counter < 5; counter++) {
         <person>
           <img class="bioPic" src="${people[counter].image}">
   			  <header class="editable"> ${people[counter].title} ${people[counter].name}</header>
-  			  <section class="editable">${people[counter].bio} </section>
-  			  <footer class="editable">${people[counter].lifespan.birth} - ${people[counter].lifespan.death}</footer>
-  			</person>
-		  </div>`;
+              <section class="editable">${people[counter].bio} </section>
+              <footer class="editable">${people[counter].lifespan.birth} - ${people[counter].lifespan.death}</footer>
+            </person>
+          </div>`;
 };
 
-/////////////////// REFERENCES AND LOGIC ///////////////////////////////////
+/////////////////// REFERENCES ///////////////////////////////////
 
 var containerEl = outputEl.getElementsByClassName("person__container");
 var userInputText = document.getElementById("userInputTextBox");
+var clickedBio;
+
+/////////////////// LOGIC ///////////////////////////////////
+
+window.addEventListener("click", function(e) {
+    for (var k = 0; k < containerEl.length; k++) {
+        containerEl[k].classList.remove("clicked");
+    }
+    for (var j = 0; j < containerEl.length; j++) {
+        containerEl[j].classList.value = "person__container";
+    }
+    if (e.target.classList.value === "person__container") {
+        e.target.classList.add("clicked");
+    } else if (e.target.parentNode.parentNode.classList.value === "person__container") {
+        e.target.parentNode.parentNode.classList.add("clicked");
+    }
+});
 
 /// Focus on the input box and bind bio content to it
 outputEl.addEventListener("click", function(e) {
     if (e.target.classList.value === "editable") {
-        var clickedBio = e.target;
+        clickedBio = e.target;
         userInputText.value = clickedBio.innerHTML;
         userInputText.focus();
         userInputText.addEventListener("keyup", function() {
@@ -81,13 +98,6 @@ outputEl.addEventListener("click", function(e) {
                     clickedBio = "";
                     userInputText.value = "";
                 }
-    //TOGGLE THIS ON AND OFF TO TEST FUNCTIONALITY
-            // document.onclick = function() {
-            //     if (e.target !== containerEl) {
-            //         clickedBio = "";
-            //         userInputText.value = "";
-            //     }
-            // };
             };
         });
         }
@@ -96,15 +106,3 @@ outputEl.addEventListener("click", function(e) {
             // alert("Click text to edit");
         };
     });
-
-/// Add border to clicked biocard
-window.addEventListener("click", function(e) {
-    for (j = 0; j < containerEl.length; j++) {
-        containerEl[j].classList.value = "person__container";
-    }
-    if (e.target.classList.value === "person__container") {
-        e.target.classList.add("clicked");
-    } else if (e.target.parentNode.parentNode.classList.value === "person__container") {
-        e.target.parentNode.parentNode.classList.add("clicked");
-    }
-});
