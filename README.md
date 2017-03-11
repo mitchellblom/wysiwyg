@@ -1,6 +1,6 @@
 # NSS WYSIWYG Exercise
 
-![Splashpage]()
+![Splashpage](https://raw.githubusercontent.com/mitchellblom/wysiwyg/wizzy/wizzy.png)
 
 <hr>
 
